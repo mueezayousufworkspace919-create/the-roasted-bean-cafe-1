@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The Roasted Bean - Premium Coffee House</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='85'%3E☕%3C/text%3E%3C/svg%3E">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: #fdfbf7;
+            color: #2c1810;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- COMPONENT 1: NAVBAR -->
+    <header class="bg-[#1a0e0a] text-white shadow-lg">
+    <div class="max-w-7xl mx-auto px-5 py-5 flex items-center justify-between">
+        
+        <!-- LOGO LINK -->
+        <a href="index.html" class="text-xl font-extrabold text-amber-500">
+            ☕ THE ROASTED BEAN
+        </a>
+
+        <!-- NAVIGATION LINKS -->
+        <div class="flex items-center gap-6 font-bold">
+            <a href="index.html" class="text-amber-500 border-b-2 border-amber-500 pb-1 transition">HOME</a>
+            <a href="src/pages/about.html" class="text-white hover:text-amber-500 transition">ABOUT</a>
+            <a href="src/pages/contact.html" class="text-white hover:text-amber-500 transition">CONTACT</a>
+            <a href="src/pages/signin.html" class="text-white hover:text-amber-500 transition">SIGN IN</a>
+            <a href="src/pages/signup.html" class="bg-amber-600 hover:bg-amber-700 text-white px-5 py-2 rounded-full transition shadow-md">SIGN UP</a>
+        </div>
+
+    </div>
+</header>
+
+
+
+    <main class="max-w-7xl mx-auto px-5 py-8">
+
+        <!-- COMPONENT 2: ANNOUNCEMENT BAR -->
+        <section class="bg-gradient-to-r from-amber-700 to-orange-900 text-white text-center
+                        px-4 py-3 rounded-xl font-bold text-sm mb-10 shadow-sm">
+
+            🎉 Weekend Special: Buy one Signature Latte, get the second one 50% off!
+            Use code ROAST50.
+
+        </section>
+
+
+        <!-- COMPONENT 3: HERO -->
+        <section class="bg-[#1e1b18] text-white rounded-[28px] px-7 py-12 md:px-14 md:py-14 mb-10">
+
+            <span class="inline-block bg-amber-500/15 text-amber-500 border border-amber-500/30
+                         px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wide mb-5">
+                Freshly Brewed Daily
+            </span>
+
+            <h1 class="text-4xl md:text-6xl font-black leading-tight mb-5">
+                Wake Up Your Senses With
+                <span class="text-amber-500">Premium Coffee</span>
+            </h1>
+
+            <p class="text-[#d6c6b3] text-base md:text-lg leading-7 max-w-4xl mb-7">
+                Crafted carefully from ethically sourced, small-batch roasted beans.
+                Experience true community perfection right around your local corner.
+            </p>
+
+            <div class="flex flex-wrap gap-3">
+
+                <a href="contact.html"
+                   class="bg-amber-500 hover:bg-amber-400 text-[#1e1b18] font-bold
+                          px-6 py-3 rounded-xl transition shadow-md">
+                    Order Pickup
+                </a>
+
+                <a href="about.html"
+                   class="border border-[#d6c6b3] hover:bg-white/10 text-white font-bold
+                          px-6 py-3 rounded-xl transition">
+                    Our Story
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- COMPONENT 4: TRUSTED PARTNERS -->
+        <section class="bg-white border border-[#efeae4] rounded-2xl p-6 md:p-8 mb-10">
+
+            <p class="text-center text-xs font-bold text-[#a1938e] uppercase tracking-widest mb-5">
+                Trusted by our local community
+            </p>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-5 text-center">
+
+                <div class="font-bold text-[#8f817b] text-sm">
+                    🏢 LOCAL TECH HUBS
+                </div>
+
+                <div class="font-bold text-[#8f817b] text-sm">
+                    🎓 CAMPUS CO-WORK
+                </div>
+
+                <div class="font-bold text-[#8f817b] text-sm">
+                    🎨 CREATIVE STUDIOS
+                </div>
+
+                <div class="font-bold text-[#8f817b] text-sm">
+                    🏥 METRO OFFICES
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- COMPONENT 5: SUCCESS STORY / STAT -->
+        <section class="bg-amber-50 border border-amber-300 rounded-[28px] p-7 md:p-10 mb-10">
+
+            <div class="grid md:grid-cols-[1fr_250px] gap-7 items-center">
+
+                <div>
+
+                    <span class="text-xs font-bold uppercase tracking-widest text-amber-700">
+                        Our community story
+                    </span>
+
+                    <h2 class="text-2xl md:text-3xl font-bold text-amber-900 mt-2 mb-3">
+                        From a small neighborhood counter to a daily ritual.
+                    </h2>
+
+                    <p class="text-sm md:text-base text-stone-600 leading-7">
+                        We focus on carefully roasted beans, welcoming service, and a
+                        comfortable place where students, professionals, and creators
+                        can slow down for a great cup of coffee.
+                    </p>
+
+                </div>
+
+                <div class="bg-[#2c1810] rounded-2xl p-7 text-center text-white">
+
+                    <div class="text-5xl font-black text-amber-500">
+                        25K+
+                    </div>
+
+                    <div class="text-xs uppercase tracking-widest font-bold text-[#d6c6b3] mt-2">
+                        Cups served
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- COMPONENT 6: FEATURES -->
+        <section class="mb-10">
+
+            <div class="text-center mb-7">
+
+                <h2 class="text-2xl md:text-3xl font-bold">
+                    Why People Choose Us
+                </h2>
+
+                <div class="w-16 h-1 bg-amber-500 rounded-full mx-auto mt-2"></div>
+
+            </div>
+
+
+            <div class="grid md:grid-cols-3 gap-5">
+
+                <article class="bg-white p-6 rounded-2xl border border-[#efeae4] shadow-sm hover:shadow-md transition">
+
+                    <div class="text-3xl mb-4">
+                        🌱
+                    </div>
+
+                    <h3 class="text-lg font-bold mb-2">
+                        Ethically Sourced
+                    </h3>
+
+                    <p class="text-sm text-stone-600 leading-6">
+                        Carefully selected beans from responsible coffee-growing communities.
+                    </p>
+
+                </article>
+
+
+                <article class="bg-white p-6 rounded-2xl border border-[#efeae4] shadow-sm hover:shadow-md transition">
+
+                    <div class="text-3xl mb-4">
+                        🔥
+                    </div>
+
+                    <h3 class="text-lg font-bold mb-2">
+                        Small-Batch Roasted
+                    </h3>
+
+                    <p class="text-sm text-stone-600 leading-6">
+                        Fresh roasting helps us keep every cup rich, aromatic, and balanced.
+                    </p>
+
+                </article>
+
+
+                <article class="bg-white p-6 rounded-2xl border border-[#efeae4] shadow-sm hover:shadow-md transition">
+
+                    <div class="text-3xl mb-4">
+                        🤝
+                    </div>
+
+                    <h3 class="text-lg font-bold mb-2">
+                        Made for Community
+                    </h3>
+
+                    <p class="text-sm text-stone-600 leading-6">
+                        A warm neighborhood space for meetings, study sessions, and conversations.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- COMPONENT 7: MENU SPECIALTIES -->
+        <section class="mb-10">
+
+            <div class="text-center mb-7">
+
+                <h2 class="text-2xl md:text-3xl font-bold">
+                    Signature Menu
+                </h2>
+
+                <p class="text-sm text-stone-500 mt-2">
+                    A few favorites from The Roasted Bean.
+                </p>
+
+            </div>
+
+
+            <div class="grid md:grid-cols-2 gap-5">
+
+                <article class="bg-white border border-[#efeae4] rounded-2xl p-5 flex gap-4 items-center">
+
+                    <div class="w-16 h-16 shrink-0 rounded-xl bg-[#fdf9f4] flex items-center justify-center text-3xl">
+                        ☕
+                    </div>
+
+                    <div class="flex-1">
+
+                        <div class="flex justify-between gap-3">
+
+                            <h3 class="font-bold">
+                                Signature Latte
+                            </h3>
+
+                            <span class="font-bold text-amber-700">
+                                Rs. 650
+                            </span>
+
+                        </div>
+
+                        <p class="text-sm text-stone-500 mt-1">
+                            Smooth espresso with creamy steamed milk.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="bg-white border border-[#efeae4] rounded-2xl p-5 flex gap-4 items-center">
+
+                    <div class="w-16 h-16 shrink-0 rounded-xl bg-[#fdf9f4] flex items-center justify-center text-3xl">
+                        🧊
+                    </div>
+
+                    <div class="flex-1">
+
+                        <div class="flex justify-between gap-3">
+
+                            <h3 class="font-bold">
+                                Iced Mocha
+                            </h3>
+
+                            <span class="font-bold text-amber-700">
+                                Rs. 720
+                            </span>
+
+                        </div>
+
+                        <p class="text-sm text-stone-500 mt-1">
+                            Chilled coffee, chocolate, and silky milk.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="bg-white border border-[#efeae4] rounded-2xl p-5 flex gap-4 items-center">
+
+                    <div class="w-16 h-16 shrink-0 rounded-xl bg-[#fdf9f4] flex items-center justify-center text-3xl">
+                        🍵
+                    </div>
+
+                    <div class="flex-1">
+
+                        <div class="flex justify-between gap-3">
+
+                            <h3 class="font-bold">
+                                Caramel Cappuccino
+                            </h3>
+
+                            <span class="font-bold text-amber-700">
+                                Rs. 690
+                            </span>
+
+                        </div>
+
+                        <p class="text-sm text-stone-500 mt-1">
+                            Bold espresso topped with caramel foam.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="bg-white border border-[#efeae4] rounded-2xl p-5 flex gap-4 items-center">
+
+                    <div class="w-16 h-16 shrink-0 rounded-xl bg-[#fdf9f4] flex items-center justify-center text-3xl">
+                        🥐
+                    </div>
+
+                    <div class="flex-1">
+
+                        <div class="flex justify-between gap-3">
+
+                            <h3 class="font-bold">
+                                Butter Croissant
+                            </h3>
+
+                            <span class="font-bold text-amber-700">
+                                Rs. 450
+                            </span>
+
+                        </div>
+
+                        <p class="text-sm text-stone-500 mt-1">
+                            Crisp outside, buttery and soft inside.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- COMPONENT 8: TESTIMONIAL -->
+        <section class="bg-[#2c1810] text-[#f5e6d3] rounded-[24px] p-8 md:p-10 text-center mb-10">
+
+            <div class="text-amber-400 text-xl mb-3">
+                ★★★★★
+            </div>
+
+            <blockquote class="max-w-3xl mx-auto text-lg md:text-xl italic leading-8">
+                “The perfect place to grab coffee before class or settle in for a productive afternoon.”
+            </blockquote>
+
+            <p class="font-bold text-amber-500 text-sm mt-4">
+                — Ayesha, regular customer
+            </p>
+
+        </section>
+
+
+        <!-- COMPONENT 9: STORE HOURS -->
+        <section class="bg-white border border-[#efeae4] rounded-2xl p-6 text-center max-w-2xl mx-auto mb-10">
+
+            <h2 class="text-xl font-extrabold text-amber-900">
+                ☀️ Visit Us Today
+            </h2>
+
+            <p class="text-lg font-bold mt-2">
+                Open Daily · 7:00 AM – 11:00 PM
+            </p>
+
+            <p class="text-sm text-stone-500 mt-1">
+                Walk in, order pickup, or stay for a while.
+            </p>
+
+        </section>
+
+
+        <!-- COMPONENT 10: NEWSLETTER -->
+        <section class="bg-gradient-to-br from-amber-100 to-orange-100 border border-amber-300
+                        rounded-[28px] p-8 md:p-10 text-center mb-10">
+
+            <h2 class="text-2xl font-bold">
+                Get Coffee Updates
+            </h2>
+
+            <p class="text-sm text-amber-900 mt-2 mb-5">
+                Join our newsletter for new drinks, seasonal specials, and weekend offers.
+            </p>
+
+            <form action="#" method="post"
+                  class="max-w-xl mx-auto flex flex-col sm:flex-row gap-3">
+
+                <label for="newsletter-email" class="sr-only">
+                    Email address
+                </label>
+
+                <input id="newsletter-email"
+                       type="email"
+                       placeholder="Enter your email"
+                       required
+                       class="flex-1 px-4 py-3 rounded-xl border border-slate-300 outline-none
+                              focus:ring-2 focus:ring-amber-500">
+
+                <button type="submit"
+                        class="bg-amber-900 hover:bg-amber-800 text-white font-bold
+                               px-6 py-3 rounded-xl transition">
+                    Subscribe
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- COMPONENT 11: CTA -->
+        <section class="text-center py-5 mb-8">
+
+            <h2 class="text-2xl font-bold">
+                Ready for your next cup?
+            </h2>
+
+            <p class="text-sm text-stone-600 mt-2">
+                Learn more about us or get in touch with the team.
+            </p>
+
+            <a href="contact.html"
+               class="inline-block mt-4 bg-amber-900 hover:bg-amber-800 text-white
+                      font-bold px-6 py-3 rounded-xl transition">
+                Contact The Roasted Bean
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- COMPONENT 12: FOOTER -->
+    <footer class="bg-[#1a0e0a] text-[#d6c6b3] border-t-4 border-amber-500">
+
+        <div class="max-w-7xl mx-auto px-5 py-12">
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+                <div>
+
+                    <h3 class="text-amber-500 font-bold text-lg mb-3">
+                        ☕ THE ROASTED BEAN
+                    </h3>
+
+                    <p class="text-sm leading-6 text-stone-400">
+                        Premium coffee, freshly roasted and served with a welcoming
+                        neighborhood experience.
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <h4 class="text-amber-500 text-xs uppercase tracking-wider font-bold mb-4">
+                        Explore
+                    </h4>
+
+                    <ul class="space-y-2 text-sm">
+
+                        <li>
+                            <a href="index.html" class="hover:text-white">
+                                Home
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="about.html" class="hover:text-white">
+                                About
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="contact.html" class="hover:text-white">
+                                Contact
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div>
+
+                    <h4 class="text-amber-500 text-xs uppercase tracking-wider font-bold mb-4">
+                        Account
+                    </h4>
+
+                    <ul class="space-y-2 text-sm">
+
+                        <li>
+                            <a href="signin.html" class="hover:text-white">
+                                Sign In
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="signup.html" class="hover:text-white">
+                                Sign Up
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div>
+
+                    <h4 class="text-amber-500 text-xs uppercase tracking-wider font-bold mb-4">
+                        Visit
+                    </h4>
+
+                    <p class="text-sm leading-6 text-stone-400">
+                        Open daily<br>
+                        7:00 AM – 11:00 PM<br>
+                        Your neighborhood coffee house
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="text-center border-t border-[#2c1810] mt-10 pt-5 text-xs text-stone-500">
+                © 2026 The Roasted Bean. All rights reserved.
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>
