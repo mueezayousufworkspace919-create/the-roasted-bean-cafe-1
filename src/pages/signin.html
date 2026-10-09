@@ -1,1014 +1,205 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Sign In - The Roasted Bean</title>
 
-    <!-- Favicon -->
     <link rel="icon" href="../../assets/favicon.png">
-
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <style>
-
-        * {
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
         body {
             margin: 0;
             font-family: "Segoe UI", Arial, sans-serif;
             background: #fdfbf7;
             color: #2c1810;
         }
-
     </style>
-
 </head>
-
 
 <body>
 
+    <!-- PREVIEW BUTTON -->
+    <button
+        type="button"
+        onclick="window.open(window.location.href, '_blank')"
+        class="fixed bottom-5 right-5 z-50 bg-amber-600 hover:bg-amber-700 text-white font-bold px-6 py-3 rounded-full shadow-lg transition">
+        ▶ Preview Page
+    </button>
 
-    <!-- =========================================
-         NAVBAR
-    ========================================== -->
-
+    <!-- NAVBAR -->
     <header class="bg-[#2c1810] text-[#f5e6d3] shadow-lg">
-
         <div class="max-w-7xl mx-auto px-5 py-5">
-
-            <nav class="flex flex-col gap-4
-                        md:flex-row md:items-center
-                        md:justify-between">
-
-
-                <!-- LOGO -->
+            <nav class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between"
+                 aria-label="Main navigation">
 
                 <a href="../../index.html"
-                   class="text-xl font-extrabold
-                          text-amber-500 tracking-wide">
-
+                   class="text-xl font-extrabold text-amber-500 tracking-wide">
                     ☕ THE ROASTED BEAN
-
                 </a>
 
-
-                <!-- NAVIGATION -->
-
-               <!-- NAVIGATION LINKS ON SIGNIN.HTML -->
-<div class="flex flex-wrap items-center gap-6 font-bold">
-    <a href="../../index.html" class="text-white hover:text-amber-500 transition">HOME</a>
-    <a href="about.html" class="text-white hover:text-amber-500 transition">ABOUT</a>
-    <a href="contact.html" class="text-white hover:text-amber-500 transition">CONTACT</a>
-    <a href="signin.html" class="text-amber-500 border-b-2 border-amber-500 pb-1 transition">SIGN IN</a>
-    <a href="signup.html" class="bg-amber-600 hover:bg-amber-700 text-white px-5 py-2 rounded-full transition shadow-md">SIGN UP</a>
-</div>
-
-
-            </nav>
-
-        </div>
-
-    </header>
-
-
-
-    <!-- =========================================
-         ANNOUNCEMENT BAR
-    ========================================== -->
-
-    <section class="bg-gradient-to-r
-                    from-amber-700 to-orange-900
-                    text-white text-center
-                    px-4 py-3
-                    font-bold text-sm">
-
-        ☕ Welcome Back to The Roasted Bean!
-
-    </section>
-
-
-
-    <!-- =========================================
-         MAIN
-    ========================================== -->
-
-    <main class="max-w-7xl mx-auto px-5 py-10">
-
-
-
-        <!-- =========================================
-             BREADCRUMB
-        ========================================== -->
-
-        <section class="mb-8">
-
-            <p class="text-sm text-stone-500">
-
-                <a href="../../index.html"
-                   class="text-amber-700
-                          hover:text-amber-900
-                          font-semibold">
-
-                    Home
-
-                </a>
-
-                <span class="mx-2">/</span>
-
-                <span>Sign In</span>
-
-            </p>
-
-        </section>
-
-
-
-        <!-- =========================================
-             HERO
-        ========================================== -->
-
-        <section class="bg-[#1e1b18]
-                        text-white
-                        rounded-[28px]
-                        px-7 py-12
-                        md:px-14 md:py-16
-                        mb-10
-                        text-center">
-
-
-            <span class="inline-block
-                         bg-amber-500/15
-                         text-amber-500
-                         border border-amber-500/30
-                         px-4 py-2
-                         rounded-full
-                         text-xs font-bold
-                         uppercase
-                         tracking-widest
-                         mb-5">
-
-                MEMBER ACCESS
-
-            </span>
-
-
-            <h1 class="text-4xl md:text-5xl
-                       font-black
-                       leading-tight
-                       mb-5">
-
-                Welcome
-
-                <span class="text-amber-500">
-                    Back
-                </span>
-
-            </h1>
-
-
-            <p class="text-[#d6c6b3]
-                      text-base md:text-lg
-                      leading-7
-                      max-w-2xl
-                      mx-auto">
-
-                Sign in to your Roasted Bean account
-                and continue your coffee journey.
-
-            </p>
-
-        </section>
-
-
-
-        <!-- =========================================
-             SIGN IN FORM
-        ========================================== -->
-
-        <section class="max-w-xl mx-auto mb-10">
-
-            <div class="bg-white
-                        border border-[#efeae4]
-                        rounded-[28px]
-                        p-7 md:p-10
-                        shadow-sm">
-
-
-                <!-- FORM HEADER -->
-
-                <div class="text-center mb-8">
-
-
-                    <div class="w-16 h-16
-                                mx-auto
-                                rounded-full
-                                bg-amber-100
-                                flex items-center
-                                justify-center
-                                text-3xl mb-4">
-
-                        ☕
-
-                    </div>
-
-
-                    <h2 class="text-2xl font-bold">
-
-                        Sign In to Your Account
-
-                    </h2>
-
-
-                    <p class="text-sm
-                              text-stone-500
-                              mt-2">
-
-                        Enter your details below to continue.
-
-                    </p>
-
+                <div class="flex flex-wrap items-center gap-6 font-bold">
+                    <a href="../../index.html" class="text-white hover:text-amber-500 transition">HOME</a>
+                    <a href="about.html" class="text-white hover:text-amber-500 transition">ABOUT</a>
+                    <a href="contact.html" class="text-white hover:text-amber-500 transition">CONTACT</a>
+                    <a href="signin.html"
+                       class="text-amber-500 border-b-2 border-amber-500 pb-1 transition"
+                       aria-current="page">SIGN IN</a>
+                    <a href="signup.html"
+                       class="bg-amber-600 hover:bg-amber-700 text-white px-5 py-2 rounded-full transition shadow-md">SIGN UP</a>
                 </div>
 
+            </nav>
+        </div>
+    </header>
 
+    <!-- ANNOUNCEMENT BAR -->
+    <aside class="bg-gradient-to-r from-amber-700 to-orange-900 text-white text-center px-4 py-3 font-bold text-sm">
+        ☕ Welcome Back to The Roasted Bean!
+    </aside>
 
-                <!-- SIGN IN FORM -->
+    <!-- MAIN -->
+    <main class="max-w-7xl mx-auto px-5 py-10">
 
-                <form action="#"
-                      method="POST"
-                      class="space-y-5">
+        <!-- BREADCRUMB -->
+        <nav class="mb-8" aria-label="Breadcrumb">
+            <p class="text-sm text-stone-500">
+                <a href="../../index.html" class="text-amber-700 hover:text-amber-900 font-semibold">Home</a>
+                <span class="mx-2" aria-hidden="true">/</span>
+                <span aria-current="page">Sign In</span>
+            </p>
+        </nav>
 
+        <!-- HERO -->
+        <section class="bg-[#1e1b18] text-white rounded-[28px] px-7 py-12 md:px-14 md:py-16 mb-10 text-center">
+            <span class="inline-block bg-amber-500/15 text-amber-500 border border-amber-500/30 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest mb-5">
+                MEMBER ACCESS
+            </span>
+
+            <h1 class="text-4xl md:text-5xl font-black leading-tight mb-5">
+                Welcome <span class="text-amber-500">Back</span>
+            </h1>
+
+            <p class="text-[#d6c6b3] text-base md:text-lg leading-7 max-w-2xl mx-auto">
+                Sign in to your Roasted Bean account and continue your coffee journey.
+            </p>
+        </section>
+
+        <!-- SIGN IN FORM -->
+        <section class="max-w-xl mx-auto mb-10" aria-labelledby="signin-heading">
+            <article class="bg-white border border-[#efeae4] rounded-[28px] p-7 md:p-10 shadow-sm">
+
+                <header class="text-center mb-8">
+                    <div class="w-16 h-16 mx-auto rounded-full bg-amber-100 flex items-center justify-center text-3xl mb-4"
+                         aria-hidden="true">☕</div>
+
+                    <h2 id="signin-heading" class="text-2xl font-bold">
+                        Sign In to Your Account
+                    </h2>
+
+                    <p class="text-sm text-stone-500 mt-2">
+                        Enter your details below to continue.
+                    </p>
+                </header>
+
+                <form action="#" method="POST" class="space-y-5">
 
                     <!-- EMAIL -->
-
                     <div>
-
-                        <label for="email"
-                               class="block
-                                      text-sm
-                                      font-bold
-                                      mb-2">
-
+                        <label for="email" class="block text-sm font-bold mb-2">
                             Email Address
-
                         </label>
 
-
-                        <input type="email"
-                               id="email"
-                               name="email"
+                        <input type="email" id="email" name="email"
                                placeholder="Enter your email address"
-                               autocomplete="email"
-                               required
-                               class="w-full
-                                      px-4 py-3
-                                      rounded-xl
-                                      border border-slate-300
-                                      outline-none
-                                      focus:ring-2
-                                      focus:ring-amber-500
-                                      focus:border-amber-500">
-
+                               autocomplete="email" required
+                               class="w-full px-4 py-3 rounded-xl border border-slate-300 outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500">
                     </div>
-
-
 
                     <!-- PASSWORD -->
-
                     <div>
-
-                        <div class="flex items-center
-                                    justify-between mb-2">
-
-
-                            <label for="password"
-                                   class="block
-                                          text-sm
-                                          font-bold">
-
+                        <div class="flex items-center justify-between mb-2">
+                            <label for="password" class="block text-sm font-bold">
                                 Password
-
                             </label>
 
-
-                            <a href="#"
-                               class="text-xs
-                                      font-semibold
-                                      text-amber-700
-                                      hover:text-amber-900">
-
+                            <a href="#" class="text-xs font-semibold text-amber-700 hover:text-amber-900">
                                 Forgot Password?
-
                             </a>
-
                         </div>
 
-
-                        <input type="password"
-                               id="password"
-                               name="password"
+                        <input type="password" id="password" name="password"
                                placeholder="Enter your password"
-                               autocomplete="current-password"
-                               required
-                               class="w-full
-                                      px-4 py-3
-                                      rounded-xl
-                                      border border-slate-300
-                                      outline-none
-                                      focus:ring-2
-                                      focus:ring-amber-500
-                                      focus:border-amber-500">
-
+                               autocomplete="current-password" required
+                               class="w-full px-4 py-3 rounded-xl border border-slate-300 outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500">
                     </div>
-
-
 
                     <!-- REMEMBER ME -->
-
                     <div class="flex items-center gap-2">
+                        <input type="checkbox" id="remember" name="remember"
+                               class="h-4 w-4 accent-amber-600">
 
-                        <input type="checkbox"
-                               id="remember"
-                               name="remember"
-                               class="w-4 h-4
-                                      accent-amber-700">
-
-
-                        <label for="remember"
-                               class="text-sm
-                                      text-stone-600">
-
+                        <label for="remember" class="text-sm text-stone-600">
                             Remember me
-
                         </label>
-
                     </div>
 
-
-
-                    <!-- SUBMIT -->
-
+                    <!-- SIGN IN BUTTON -->
                     <button type="submit"
-                            class="w-full
-                                   bg-amber-900
-                                   hover:bg-amber-800
-                                   text-white
-                                   font-bold
-                                   px-6 py-3
-                                   rounded-xl
-                                   transition
-                                   shadow-md">
-
-                        Sign In ☕ →
-
+                            class="w-full bg-amber-600 hover:bg-amber-700 text-white font-bold px-6 py-3 rounded-xl transition shadow-md">
+                        Sign In
                     </button>
-
 
                 </form>
 
-
-
                 <!-- SIGN UP LINK -->
-
-                <div class="text-center
-                            border-t border-[#efeae4]
-                            mt-7 pt-6">
-
-
-                    <p class="text-sm
-                              text-stone-500">
-
+                <footer class="text-center mt-7">
+                    <p class="text-sm text-stone-600">
                         Don't have an account?
-
                         <a href="signup.html"
-                           class="font-bold
-                                  text-amber-700
-                                  hover:text-amber-900">
-
-                            Create an account
-
+                           class="font-bold text-amber-700 hover:text-amber-900 transition">
+                            Sign Up
                         </a>
-
                     </p>
+                </footer>
 
-                </div>
-
-            </div>
-
+            </article>
         </section>
 
-
-
-        <!-- =========================================
-             MEMBER BENEFITS
-        ========================================== -->
-
-        <section class="mb-10">
-
-
-            <div class="text-center mb-7">
-
-
-                <span class="text-xs font-bold
-                             uppercase
-                             tracking-widest
-                             text-amber-700">
-
-                    WHY JOIN
-
-                </span>
-
-
-                <h2 class="text-3xl
-                           font-bold mt-2">
-
-                    Your Coffee Community
-
-                </h2>
-
-            </div>
-
-
-
-            <div class="grid md:grid-cols-3 gap-5">
-
-
-                <!-- FAVORITES -->
-
-                <article class="bg-white
-                                border border-[#efeae4]
-                                rounded-2xl
-                                p-6
-                                text-center
-                                shadow-sm">
-
-
-                    <div class="text-3xl mb-4">
-                        ☕
-                    </div>
-
-
-                    <h3 class="font-bold
-                               text-lg mb-2">
-
-                        Your Favorites
-
-                    </h3>
-
-
-                    <p class="text-sm
-                              text-stone-600
-                              leading-6">
-
-                        Keep track of the coffee
-                        experiences you love.
-
-                    </p>
-
-                </article>
-
-
-
-                <!-- OFFERS -->
-
-                <article class="bg-white
-                                border border-[#efeae4]
-                                rounded-2xl
-                                p-6
-                                text-center
-                                shadow-sm">
-
-
-                    <div class="text-3xl mb-4">
-                        🎁
-                    </div>
-
-
-                    <h3 class="font-bold
-                               text-lg mb-2">
-
-                        Special Offers
-
-                    </h3>
-
-
-                    <p class="text-sm
-                              text-stone-600
-                              leading-6">
-
-                        Stay connected with seasonal
-                        specials and community offers.
-
-                    </p>
-
-                </article>
-
-
-
-                <!-- COMMUNITY -->
-
-                <article class="bg-white
-                                border border-[#efeae4]
-                                rounded-2xl
-                                p-6
-                                text-center
-                                shadow-sm">
-
-
-                    <div class="text-3xl mb-4">
-                        🤎
-                    </div>
-
-
-                    <h3 class="font-bold
-                               text-lg mb-2">
-
-                        Stay Connected
-
-                    </h3>
-
-
-                    <p class="text-sm
-                              text-stone-600
-                              leading-6">
-
-                        Be part of The Roasted Bean
-                        community wherever you are.
-
-                    </p>
-
-                </article>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =========================================
-             HELP / CONTACT
-        ========================================== -->
-
-        <section class="bg-amber-50
-                        border border-amber-200
-                        rounded-[28px]
-                        p-8 md:p-10
-                        text-center
-                        mb-10">
-
-
-            <div class="text-4xl mb-4">
-                💬
-            </div>
-
-
-            <h2 class="text-2xl
-                       md:text-3xl
-                       font-bold mb-3">
-
-                Need Help?
-
-            </h2>
-
-
-            <p class="text-sm
-                      text-stone-600
-                      max-w-2xl
-                      mx-auto mb-5">
-
-                If you are having trouble accessing
-                your account, our team is happy to help.
-
+        <!-- CONTACT HELP -->
+        <section class="text-center mb-10" aria-label="Account assistance">
+            <p class="text-sm text-stone-500 leading-7">
+                Need help accessing your account?
+                <a href="contact.html"
+                   class="font-semibold text-amber-700 hover:text-amber-900 transition">
+                    Contact Us
+                </a>
             </p>
-
-
-            <a href="contact.html"
-               class="inline-block
-                      bg-amber-900
-                      hover:bg-amber-800
-                      text-white
-                      font-bold
-                      px-6 py-3
-                      rounded-xl
-                      transition">
-
-                Contact Us
-
-            </a>
-
-        </section>
-
-
-
-        <!-- =========================================
-             VISIT / ADDRESS
-        ========================================== -->
-
-        <section class="bg-white
-                        border border-[#efeae4]
-                        rounded-[28px]
-                        p-8 md:p-10
-                        mb-10">
-
-
-            <div class="text-center mb-8">
-
-
-                <span class="text-xs
-                             font-bold
-                             uppercase
-                             tracking-widest
-                             text-amber-700">
-
-                    VISIT US
-
-                </span>
-
-
-                <h2 class="text-3xl
-                           md:text-4xl
-                           font-bold mt-2">
-
-                    The Roasted Bean
-
-                </h2>
-
-            </div>
-
-
-
-            <div class="grid md:grid-cols-3 gap-5">
-
-
-                <!-- ADDRESS -->
-
-                <div class="bg-[#fdfbf7]
-                            rounded-2xl
-                            p-6
-                            text-center">
-
-                    <div class="text-4xl mb-4">
-                        📍
-                    </div>
-
-
-                    <h3 class="font-bold
-                               text-lg mb-2">
-
-                        Address
-
-                    </h3>
-
-
-                    <p class="text-sm
-                              text-stone-600
-                              leading-6">
-
-                        24 Main Street<br>
-                        Downtown Coffee District<br>
-                        Lahore, Punjab, Pakistan
-
-                    </p>
-
-                </div>
-
-
-
-                <!-- HOURS -->
-
-                <div class="bg-[#fdfbf7]
-                            rounded-2xl
-                            p-6
-                            text-center">
-
-                    <div class="text-4xl mb-4">
-                        🕐
-                    </div>
-
-
-                    <h3 class="font-bold
-                               text-lg mb-2">
-
-                        Opening Hours
-
-                    </h3>
-
-
-                    <p class="text-sm
-                              text-stone-600
-                              leading-6">
-
-                        Monday – Sunday<br>
-                        7:00 AM – 11:00 PM
-
-                    </p>
-
-                </div>
-
-
-
-                <!-- PHONE -->
-
-                <div class="bg-[#fdfbf7]
-                            rounded-2xl
-                            p-6
-                            text-center">
-
-                    <div class="text-4xl mb-4">
-                        📞
-                    </div>
-
-
-                    <h3 class="font-bold
-                               text-lg mb-2">
-
-                        Phone
-
-                    </h3>
-
-
-                    <p class="text-sm
-                              text-stone-600
-                              leading-6">
-
-                        +92 300 1234567<br>
-                        hello@theroastedbean.com
-
-                    </p>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =========================================
-             CTA
-        ========================================== -->
-
-        <section class="bg-[#6f4e37]
-                        text-white
-                        rounded-[28px]
-                        p-8 md:p-12
-                        text-center
-                        mb-10">
-
-
-            <h2 class="text-3xl
-                       md:text-4xl
-                       font-bold mb-4">
-
-                New to The Roasted Bean?
-
-            </h2>
-
-
-            <p class="text-[#f5e6d3]
-                      max-w-2xl
-                      mx-auto mb-6">
-
-                Create your account and become part
-                of our growing coffee community.
-
-            </p>
-
-
-            <a href="signup.html"
-               class="inline-block
-                      bg-white
-                      text-[#2c1810]
-                      font-bold
-                      px-6 py-3
-                      rounded-xl
-                      hover:bg-amber-100
-                      transition">
-
-                Create an Account
-
-            </a>
-
         </section>
 
     </main>
 
-
-
-    <!-- =========================================
-         FOOTER
-    ========================================== -->
-
-    <footer class="bg-[#1a0e0a]
-                   text-[#d6c6b3]
-                   border-t-4
-                   border-amber-500">
-
-
-        <div class="max-w-7xl
-                    mx-auto
-                    px-5 py-12">
-
-
-            <div class="grid
-                        sm:grid-cols-2
-                        lg:grid-cols-4
-                        gap-8">
-
-
-                <!-- BRAND -->
-
-                <div>
-
-                    <h3 class="text-amber-500
-                               font-bold
-                               text-lg
-                               mb-3">
-
-                        ☕ THE ROASTED BEAN
-
-                    </h3>
-
-
-                    <p class="text-sm
-                              leading-6
-                              text-stone-400">
-
-                        Premium coffee, freshly roasted
-                        and served with a welcoming
-                        neighborhood experience.
-
-                    </p>
-
-                </div>
-
-
-
-                <!-- EXPLORE -->
-
-                <div>
-
-                    <h4 class="text-amber-500
-                               text-xs uppercase
-                               tracking-wider
-                               font-bold mb-4">
-
-                        Explore
-
-                    </h4>
-
-
-                    <ul class="space-y-2 text-sm">
-
-
-                        <li>
-
-                            <a href="../../index.html"
-                               class="hover:text-white">
-
-                                Home
-
-                            </a>
-
-                        </li>
-
-
-                        <li>
-
-                            <a href="about.html"
-                               class="hover:text-white">
-
-                                About
-
-                            </a>
-
-                        </li>
-
-
-                        <li>
-
-                            <a href="contact.html"
-                               class="hover:text-white">
-
-                                Contact
-
-                            </a>
-
-                        </li>
-
-                    </ul>
-
-                </div>
-
-
-
-                <!-- ACCOUNT -->
-
-                <div>
-
-                    <h4 class="text-amber-500
-                               text-xs uppercase
-                               tracking-wider
-                               font-bold mb-4">
-
-                        Account
-
-                    </h4>
-
-
-                    <ul class="space-y-2 text-sm">
-
-
-                        <li>
-
-                            <a href="signin.html"
-                               class="text-amber-500
-                                      font-semibold">
-
-                                Sign In
-
-                            </a>
-
-                        </li>
-
-
-                        <li>
-
-                            <a href="signup.html"
-                               class="hover:text-white">
-
-                                Sign Up
-
-                            </a>
-
-                        </li>
-
-                    </ul>
-
-                </div>
-
-
-
-                <!-- VISIT -->
-
-                <div>
-
-                    <h4 class="text-amber-500
-                               text-xs uppercase
-                               tracking-wider
-                               font-bold mb-4">
-
-                        Visit
-
-                    </h4>
-
-
-                    <p class="text-sm
-                              leading-6
-                              text-stone-400">
-
-                        24 Main Street<br>
-                        Downtown Coffee District<br>
-                        Lahore, Punjab, Pakistan<br><br>
-
-                        Open daily<br>
-                        7:00 AM – 11:00 PM
-
-                    </p>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- COPYRIGHT -->
-
-            <div class="text-center
-                        border-t border-[#2c1810]
-                        mt-10 pt-5
-                        text-xs text-stone-500">
-
-                © 2026 The Roasted Bean.
-                All rights reserved.
-
-            </div>
-
+    <!-- FOOTER -->
+    <footer class="bg-[#2c1810] text-[#f5e6d3] py-6">
+        <div class="max-w-7xl mx-auto px-5 text-center">
+            <p class="text-sm text-stone-300">
+                &copy; 2026 The Roasted Bean. All rights reserved.
+            </p>
+
+            <nav class="flex flex-wrap justify-center gap-5 mt-4 text-sm"
+                 aria-label="Footer navigation">
+                <a href="../../index.html" class="hover:text-amber-500 transition">Home</a>
+                <a href="about.html" class="hover:text-amber-500 transition">About</a>
+                <a href="contact.html" class="hover:text-amber-500 transition">Contact</a>
+                <a href="signup.html" class="hover:text-amber-500 transition">Sign Up</a>
+            </nav>
         </div>
-
     </footer>
 
-
 </body>
-
 </html>
+```

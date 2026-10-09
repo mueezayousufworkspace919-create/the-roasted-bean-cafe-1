@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Contact Us - The Roasted Bean</title>
-
     <link rel="icon" href="../../assets/favicon.png">
 
     <script src="https://cdn.tailwindcss.com"></script>
@@ -30,163 +30,132 @@
 
 <body>
 
-<header class="bg-[#2c1810] text-[#f5e6d3] shadow-lg">
+    <!-- COMPONENT 1: HEADER AND NAVIGATION -->
+    <header class="bg-[#2c1810] text-[#f5e6d3] shadow-lg">
+        <div class="max-w-7xl mx-auto px-5 py-5">
 
-    <div class="max-w-7xl mx-auto px-5 py-5">
+            <nav class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between"
+                 aria-label="Main navigation">
 
-        <nav class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+                <!-- THE ROASTED BEAN LOGO LINK -->
+                <a href="../../index.html"
+                   class="text-xl font-extrabold text-amber-500">
+                    ☕ THE ROASTED BEAN
+                </a>
 
-           <!-- THE ROASTED BEAN LOGO LINK -->
-<a href="../../index.html" class="text-xl font-extrabold text-amber-500">
-    ☕ THE ROASTED BEAN
-</a>
+                <!-- NAVIGATION LINKS -->
+                <div class="flex flex-wrap items-center gap-6 font-bold">
+                    <a href="../../index.html"
+                       class="text-white hover:text-amber-500 transition">
+                        HOME
+                    </a>
 
-<!-- NAVIGATION LINKS -->
-<!-- NAVIGATION LINKS ON CONTACT.HTML -->
-<div class="flex flex-wrap items-center gap-6 font-bold">
-    <a href="../../index.html" class="text-white hover:text-amber-500 transition">HOME</a>
-    <a href="about.html" class="text-white hover:text-amber-500 transition">ABOUT</a>
-    <a href="contact.html" class="text-amber-500 border-b-2 border-amber-500 pb-1 transition">CONTACT</a>
-    <a href="signin.html" class="text-white hover:text-amber-500 transition">SIGN IN</a>
-    <a href="signup.html" class="bg-amber-600 hover:bg-amber-700 text-white px-5 py-2 rounded-full transition shadow-md">SIGN UP</a>
-</div>
+                    <a href="about.html"
+                       class="text-white hover:text-amber-500 transition">
+                        ABOUT
+                    </a>
+
+                    <a href="contact.html"
+                       class="text-amber-500 border-b-2 border-amber-500 pb-1 transition"
+                       aria-current="page">
+                        CONTACT
+                    </a>
+
+                    <a href="signin.html"
+                       class="text-white hover:text-amber-500 transition">
+                        SIGN IN
+                    </a>
+
+                    <a href="signup.html"
+                       class="bg-amber-600 hover:bg-amber-700 text-white px-5 py-2 rounded-full transition shadow-md">
+                        SIGN UP
+                    </a>
+                </div>
+
+            </nav>
+
+        </div>
+    </header>
 
 
-
-            </div>
-
-        </nav>
-
-    </div>
-
-</header>
-
-
-
-    <!-- =========================================
-         COMPONENT 2: ANNOUNCEMENT BAR
-    ========================================== -->
-
-    <section class="bg-gradient-to-r from-amber-700 to-orange-900
-                    text-white text-center px-4 py-3
-                    font-bold text-sm">
-
+    <!-- COMPONENT 2: ANNOUNCEMENT BAR -->
+    <section class="bg-gradient-to-r from-amber-700 to-orange-900 text-white text-center px-4 py-3 font-bold text-sm"
+             aria-label="Announcement">
         ☕ We'd Love to Hear From You — Get in Touch With The Roasted Bean.
-
     </section>
 
 
+    <!-- MAIN CONTENT -->
     <main class="max-w-7xl mx-auto px-5 py-8">
 
-
-        <!-- =========================================
-             COMPONENT 3: BREADCRUMB
-        ========================================== -->
-
-        <section class="mb-8">
-
+        <!-- COMPONENT 3: BREADCRUMB -->
+        <nav class="mb-8" aria-label="Breadcrumb">
             <p class="text-sm text-stone-500">
-
                 <a href="index.html"
                    class="text-amber-700 hover:text-amber-900 font-semibold">
                     Home
                 </a>
 
-                <span class="mx-2">/</span>
+                <span class="mx-2" aria-hidden="true">/</span>
 
-                <span>Contact</span>
-
+                <span aria-current="page">Contact</span>
             </p>
+        </nav>
 
-        </section>
 
+        <!-- COMPONENT 4: HERO -->
+        <section class="bg-[#1e1b18] text-white rounded-[28px] px-7 py-14 md:px-14 md:py-16 mb-10 text-center"
+                 aria-labelledby="contact-heading">
 
-        <!-- =========================================
-             COMPONENT 4: HERO
-        ========================================== -->
-
-        <section class="bg-[#1e1b18] text-white rounded-[28px]
-                        px-7 py-14 md:px-14 md:py-16
-                        mb-10 text-center">
-
-            <span class="inline-block bg-amber-500/15 text-amber-500
-                         border border-amber-500/30 px-4 py-2
-                         rounded-full text-xs font-bold
-                         uppercase tracking-widest mb-6">
-
+            <span class="inline-block bg-amber-500/15 text-amber-500 border border-amber-500/30 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest mb-6">
                 GET IN TOUCH
-
             </span>
 
-            <h1 class="text-4xl md:text-6xl font-black
-                       leading-tight mb-5">
-
-                Let's Talk
-                <span class="text-amber-500">Coffee</span>
-
+            <h1 id="contact-heading"
+                class="text-4xl md:text-6xl font-black leading-tight mb-5">
+                Let's Talk <span class="text-amber-500">Coffee</span>
             </h1>
 
-            <p class="text-[#d6c6b3] text-base md:text-lg
-                      leading-8 max-w-3xl mx-auto">
-
+            <p class="text-[#d6c6b3] text-base md:text-lg leading-8 max-w-3xl mx-auto">
                 Have a question, suggestion, or just want to say hello?
                 Send us a message and our team will get back to you.
-
             </p>
 
         </section>
 
 
-        <!-- =========================================
-             COMPONENT 5: CONTACT INFORMATION
-        ========================================== -->
-
-        <section class="mb-10">
+        <!-- COMPONENT 5: CONTACT INFORMATION -->
+        <section class="mb-10" aria-label="Contact information">
 
             <div class="grid md:grid-cols-3 gap-5">
 
-
                 <!-- ADDRESS -->
+                <article class="bg-white border border-[#efeae4] rounded-2xl p-7 text-center shadow-sm hover:shadow-md transition">
 
-                <article class="bg-white border border-[#efeae4]
-                                rounded-2xl p-7 text-center
-                                shadow-sm hover:shadow-md transition">
-
-                    <div class="w-14 h-14 mx-auto rounded-full
-                                bg-amber-100 flex items-center
-                                justify-center text-2xl mb-5">
-
+                    <div class="w-14 h-14 mx-auto rounded-full bg-amber-100 flex items-center justify-center text-2xl mb-5"
+                         aria-hidden="true">
                         📍
-
                     </div>
 
                     <h2 class="text-lg font-bold mb-2">
                         Visit Us
                     </h2>
 
-                    <p class="text-sm text-stone-600 leading-6">
-
+                    <address class="text-sm text-stone-600 leading-6 not-italic">
                         24 Main Street<br>
                         Downtown Coffee District<br>
                         Lahore, Pakistan
-
-                    </p>
+                    </address>
 
                 </article>
 
 
                 <!-- PHONE -->
+                <article class="bg-white border border-[#efeae4] rounded-2xl p-7 text-center shadow-sm hover:shadow-md transition">
 
-                <article class="bg-white border border-[#efeae4]
-                                rounded-2xl p-7 text-center
-                                shadow-sm hover:shadow-md transition">
-
-                    <div class="w-14 h-14 mx-auto rounded-full
-                                bg-amber-100 flex items-center
-                                justify-center text-2xl mb-5">
-
+                    <div class="w-14 h-14 mx-auto rounded-full bg-amber-100 flex items-center justify-center text-2xl mb-5"
+                         aria-hidden="true">
                         📞
-
                     </div>
 
                     <h2 class="text-lg font-bold mb-2">
@@ -194,27 +163,23 @@
                     </h2>
 
                     <p class="text-sm text-stone-600 leading-6">
-
-                        +92 300 1234567<br>
+                        <a href="tel:+923001234567"
+                           class="hover:text-amber-700">
+                            +92 300 1234567
+                        </a>
+                        <br>
                         Mon – Sun · 7 AM – 11 PM
-
                     </p>
 
                 </article>
 
 
                 <!-- EMAIL -->
+                <article class="bg-white border border-[#efeae4] rounded-2xl p-7 text-center shadow-sm hover:shadow-md transition">
 
-                <article class="bg-white border border-[#efeae4]
-                                rounded-2xl p-7 text-center
-                                shadow-sm hover:shadow-md transition">
-
-                    <div class="w-14 h-14 mx-auto rounded-full
-                                bg-amber-100 flex items-center
-                                justify-center text-2xl mb-5">
-
+                    <div class="w-14 h-14 mx-auto rounded-full bg-amber-100 flex items-center justify-center text-2xl mb-5"
+                         aria-hidden="true">
                         ✉️
-
                     </div>
 
                     <h2 class="text-lg font-bold mb-2">
@@ -222,350 +187,215 @@
                     </h2>
 
                     <p class="text-sm text-stone-600 leading-6">
-
-                        hello@theroastedbean.com<br>
+                        <a href="mailto:hello@theroastedbean.com"
+                           class="hover:text-amber-700">
+                            hello@theroastedbean.com
+                        </a>
+                        <br>
                         We reply as soon as possible.
-
                     </p>
 
                 </article>
 
             </div>
-
         </section>
 
 
-        <!-- =========================================
-             COMPONENT 6: CONTACT FORM
-        ========================================== -->
-
-        <section class="mb-10">
+        <!-- COMPONENT 6: CONTACT FORM AND ADDITIONAL INFORMATION -->
+        <section class="mb-10" aria-label="Send us a message">
 
             <div class="grid lg:grid-cols-[1fr_380px] gap-7">
 
+                <!-- CONTACT FORM -->
+                <article class="bg-[#1a0e0a] border border-stone-800 rounded-[28px] p-7 md:p-10 shadow-xl max-w-2xl mx-auto w-full">
 
-               <!-- =====================================
-               CONTACT FORM
-====================================== -->
-<div class="bg-[#1a0e0a] border border-stone-800 rounded-[28px] p-7 md:p-10 shadow-xl max-w-2xl mx-auto">
-  
-  <div class="mb-7 text-center md:text-left">
-    <span class="text-xs font-bold uppercase tracking-widest text-amber-500">SEND A MESSAGE</span>
-    <h2 class="text-3xl font-bold text-white mt-2">Contact The Roasted Bean</h2>
-  </div>
+                    <div class="mb-7 text-center md:text-left">
 
-  <!-- Formspree Integration Form Connected Securely -->
-  <form action="https://formspree.io/f/mljdqwrj" method="POST" class="space-y-6">
-    
-    <!-- FULL NAME -->
-    <div>
-      <label for="name" class="block text-sm font-bold text-stone-200 mb-2">Full Name</label>
-      <input type="text" id="name" name="name" required 
-             class="w-full px-4 py-3 rounded-xl bg-stone-950 border border-stone-800 text-white placeholder-stone-500 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition text-sm" 
-             placeholder="Enter your full name">
-    </div>
+                        <span class="text-xs font-bold uppercase tracking-widest text-amber-500">
+                            SEND A MESSAGE
+                        </span>
 
-    <!-- EMAIL ADDRESS -->
-    <div>
-      <label for="email" class="block text-sm font-bold text-stone-200 mb-2">Email Address</label>
-      <input type="email" id="email" name="email" required 
-             class="w-full px-4 py-3 rounded-xl bg-stone-950 border border-stone-800 text-white placeholder-stone-500 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition text-sm" 
-             placeholder="Enter your email address">
-    </div>
-
-    <!-- SUBJECT -->
-    <div>
-      <label for="subject" class="block text-sm font-bold text-stone-200 mb-2">Subject</label>
-      <input type="text" id="subject" name="subject" required 
-             class="w-full px-4 py-3 rounded-xl bg-stone-950 border border-stone-800 text-white placeholder-stone-500 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition text-sm" 
-             placeholder="Enter your subject">
-    </div>
-
-    <!-- PICKUP TIME & DETAILS -->
-    <div>
-      <label for="message" class="block text-sm font-bold text-stone-200 mb-2">Pickup Time & Order Details</label>
-      <textarea id="message" name="message" rows="5" required 
-                class="w-full px-4 py-3 rounded-xl bg-stone-950 border border-stone-800 text-white placeholder-stone-500 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition text-sm resize-none" 
-                placeholder="Enter your preferred pickup time and what you would like to order..."></textarea>
-    </div>
-
-    <!-- SEND BUTTON -->
-    <button type="submit" class="w-full py-3 px-6 bg-[#633219] hover:bg-[#4d2511] text-white font-bold rounded-xl transition shadow-lg text-center tracking-wide flex items-center justify-center gap-2">
-      Send Message ☕ →
-    </button>
-    
-  </form>
-</div>
-
-
-                <!-- =====================================
-                     SIDE CARD
-                ====================================== -->
-
-                <aside class="bg-[#2c1810] text-[#f5e6d3]
-                              rounded-[28px] p-7 md:p-8">
-
-                    <div class="text-5xl mb-6">
-                        ☕
-                    </div>
-
-                    <h2 class="text-2xl font-bold
-                               text-white mb-4">
-
-                        Come Say Hello
-
-                    </h2>
-
-                    <p class="text-[#d6c6b3]
-                              leading-7 text-sm mb-7">
-
-                        Whether you have a question about our menu,
-                        want to share feedback, or simply want to connect,
-                        we'd be happy to hear from you.
-
-                    </p>
-
-
-                    <div class="space-y-5">
-
-
-                        <!-- HOURS -->
-
-                        <div>
-
-                            <p class="text-amber-500 text-xs
-                                      uppercase tracking-widest
-                                      font-bold">
-
-                                Opening Hours
-
-                            </p>
-
-                            <p class="text-sm mt-1">
-
-                                Monday – Sunday<br>
-                                7:00 AM – 11:00 PM
-
-                            </p>
-
-                        </div>
-
-
-                        <!-- ADDRESS -->
-
-                        <div>
-
-                            <p class="text-amber-500 text-xs
-                                      uppercase tracking-widest
-                                      font-bold">
-
-                                Address
-
-                            </p>
-
-                            <p class="text-sm mt-1">
-
-                                24 Main Street<br>
-                                Downtown Coffee District<br>
-                                Lahore, Pakistan
-
-                            </p>
-
-                        </div>
-
-
-                        <!-- EMAIL -->
-
-                        <div>
-
-                            <p class="text-amber-500 text-xs
-                                      uppercase tracking-widest
-                                      font-bold">
-
-                                Email
-
-                            </p>
-
-                            <p class="text-sm mt-1">
-
-                                hello@theroastedbean.com
-
-                            </p>
-
-                        </div>
-
-
-                        <!-- PHONE -->
-
-                        <div>
-
-                            <p class="text-amber-500 text-xs
-                                      uppercase tracking-widest
-                                      font-bold">
-
-                                Phone
-
-                            </p>
-
-                            <p class="text-sm mt-1">
-
-                                +92 300 1234567
-
-                            </p>
-
-                        </div>
+                        <h2 class="text-3xl font-bold text-white mt-2">
+                            Contact The Roasted Bean
+                        </h2>
 
                     </div>
+
+
+                    <!-- Formspree Integration -->
+                    <form action="https://formspree.io/f/mljdqwrj"
+                          method="POST"
+                          class="space-y-6">
+
+                        <!-- FULL NAME -->
+                        <div>
+                            <label for="name"
+                                   class="block text-sm font-bold text-stone-200 mb-2">
+                                Full Name
+                            </label>
+
+                            <input type="text"
+                                   id="name"
+                                   name="name"
+                                   required
+                                   autocomplete="name"
+                                   class="w-full px-4 py-3 rounded-xl bg-stone-950 border border-stone-800 text-white placeholder-stone-500 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition text-sm"
+                                   placeholder="Enter your full name">
+                        </div>
+
+
+                        <!-- EMAIL ADDRESS -->
+                        <div>
+                            <label for="email"
+                                   class="block text-sm font-bold text-stone-200 mb-2">
+                                Email Address
+                            </label>
+
+                            <input type="email"
+                                   id="email"
+                                   name="email"
+                                   required
+                                   autocomplete="email"
+                                   class="w-full px-4 py-3 rounded-xl bg-stone-950 border border-stone-800 text-white placeholder-stone-500 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition text-sm"
+                                   placeholder="Enter your email address">
+                        </div>
+
+
+                        <!-- SUBJECT -->
+                        <div>
+                            <label for="subject"
+                                   class="block text-sm font-bold text-stone-200 mb-2">
+                                Subject
+                            </label>
+
+                            <input type="text"
+                                   id="subject"
+                                   name="subject"
+                                   required
+                                   class="w-full px-4 py-3 rounded-xl bg-stone-950 border border-stone-800 text-white placeholder-stone-500 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition text-sm"
+                                   placeholder="What is your message about?">
+                        </div>
+
+
+                        <!-- MESSAGE -->
+                        <div>
+                            <label for="message"
+                                   class="block text-sm font-bold text-stone-200 mb-2">
+                                Your Message
+                            </label>
+
+                            <textarea id="message"
+                                      name="message"
+                                      rows="5"
+                                      required
+                                      class="w-full px-4 py-3 rounded-xl bg-stone-950 border border-stone-800 text-white placeholder-stone-500 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition text-sm resize-y"
+                                      placeholder="Write your message here..."></textarea>
+                        </div>
+
+
+                        <!-- SUBMIT BUTTON -->
+                        <button type="submit"
+                                class="w-full bg-amber-600 hover:bg-amber-700 text-white font-bold px-6 py-3 rounded-xl transition shadow-md">
+                            Send Message ☕
+                        </button>
+
+                    </form>
+
+                </article>
+
+
+                <!-- ADDITIONAL CONTACT INFORMATION -->
+                <aside class="space-y-6" aria-label="Contact help">
+
+                    <section class="bg-white border border-[#efeae4] rounded-2xl p-7 shadow-sm">
+
+                        <h2 class="text-xl font-bold mb-4">
+                            We're Here to Help
+                        </h2>
+
+                        <p class="text-sm text-stone-600 leading-7">
+                            Whether you have a question, feedback, or a suggestion,
+                            we'd love to hear from you. Send us a message using the
+                            contact form, and we'll get back to you as soon as possible.
+                        </p>
+
+                    </section>
+
+
+                    <section class="bg-[#2c1810] text-[#f5e6d3] rounded-2xl p-7 shadow-md">
+
+                        <h2 class="text-xl font-bold text-amber-500 mb-4">
+                            Quick Contact
+                        </h2>
+
+                        <ul class="space-y-4 text-sm leading-6">
+
+                            <li>
+                                <span class="font-bold">Email:</span>
+                                <br>
+                                <a href="mailto:hello@theroastedbean.com"
+                                   class="hover:text-amber-500 transition">
+                                    hello@theroastedbean.com
+                                </a>
+                            </li>
+
+                            <li>
+                                <span class="font-bold">Phone:</span>
+                                <br>
+                                <a href="tel:+923001234567"
+                                   class="hover:text-amber-500 transition">
+                                    +92 300 1234567
+                                </a>
+                            </li>
+
+                            <li>
+                                <span class="font-bold">Business Hours:</span>
+                                <br>
+                                Monday – Sunday, 7 AM – 11 PM
+                            </li>
+
+                        </ul>
+
+                    </section>
+
+
+                    <section class="bg-amber-50 border border-amber-100 rounded-2xl p-7">
+
+                        <h2 class="text-lg font-bold mb-3">
+                            A Little Coffee Reminder ☕
+                        </h2>
+
+                        <p class="text-sm text-stone-600 leading-7">
+                            Great conversations begin with a simple hello.
+                            Drop us a message and let's make your coffee experience
+                            even better.
+                        </p>
+
+                    </section>
 
                 </aside>
 
             </div>
-
         </section>
 
 
-        <!-- =========================================
-             COMPONENT 7: FAQ
-        ========================================== -->
+        <!-- COMPONENT 7: FINAL CALL TO ACTION -->
+        <section class="bg-[#f3e7d8] rounded-[28px] px-7 py-12 md:px-14 text-center mb-10"
+                 aria-labelledby="contact-cta-heading">
 
-        <section class="mb-10">
-
-            <div class="text-center mb-8">
-
-                <span class="text-xs font-bold uppercase
-                             tracking-widest text-amber-700">
-
-                    QUICK ANSWERS
-
-                </span>
-
-                <h2 class="text-3xl md:text-4xl font-bold mt-2">
-
-                    Frequently Asked Questions
-
-                </h2>
-
-            </div>
-
-
-            <div class="grid md:grid-cols-2 gap-5">
-
-
-                <!-- FAQ 1 -->
-
-                <article class="bg-white border border-[#efeae4]
-                                rounded-2xl p-6">
-
-                    <h3 class="font-bold text-lg mb-2">
-
-                        Do you offer takeaway?
-
-                    </h3>
-
-                    <p class="text-sm text-stone-600 leading-6">
-
-                        Yes. You can place an order for pickup and enjoy
-                        your coffee wherever you like.
-
-                    </p>
-
-                </article>
-
-
-                <!-- FAQ 2 -->
-
-                <article class="bg-white border border-[#efeae4]
-                                rounded-2xl p-6">
-
-                    <h3 class="font-bold text-lg mb-2">
-
-                        What time do you open?
-
-                    </h3>
-
-                    <p class="text-sm text-stone-600 leading-6">
-
-                        We are open every day from 7:00 AM until 11:00 PM.
-
-                    </p>
-
-                </article>
-
-
-                <!-- FAQ 3 -->
-
-                <article class="bg-white border border-[#efeae4]
-                                rounded-2xl p-6">
-
-                    <h3 class="font-bold text-lg mb-2">
-
-                        Can I study at the coffee house?
-
-                    </h3>
-
-                    <p class="text-sm text-stone-600 leading-6">
-
-                        Absolutely. Our welcoming space is designed for
-                        studying, working, meetings, and conversations.
-
-                    </p>
-
-                </article>
-
-
-                <!-- FAQ 4 -->
-
-                <article class="bg-white border border-[#efeae4]
-                                rounded-2xl p-6">
-
-                    <h3 class="font-bold text-lg mb-2">
-
-                        How can I give feedback?
-
-                    </h3>
-
-                    <p class="text-sm text-stone-600 leading-6">
-
-                        Use the contact form on this page and send us
-                        your message directly.
-
-                    </p>
-
-                </article>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================================
-             COMPONENT 8: CTA
-        ========================================== -->
-
-        <section class="bg-amber-50 border border-amber-200
-                        rounded-[28px] p-8 md:p-12
-                        text-center mb-10">
-
-            <h2 class="text-3xl md:text-4xl font-bold mb-4">
-
-                Looking for Great Coffee?
-
+            <h2 id="contact-cta-heading"
+                class="text-3xl md:text-4xl font-black mb-4">
+                Every Great Conversation Starts Somewhere.
             </h2>
 
-            <p class="text-stone-600 max-w-2xl mx-auto mb-6">
-
-                Explore our story and discover what makes
-                The Roasted Bean special.
-
+            <p class="text-stone-600 leading-7 max-w-2xl mx-auto mb-7">
+                Thank you for being part of The Roasted Bean.
+                We look forward to hearing from you.
             </p>
 
             <a href="about.html"
-               class="inline-block bg-amber-900
-                      hover:bg-amber-800 text-white
-                      font-bold px-6 py-3 rounded-xl transition">
-
+               class="inline-block bg-amber-600 hover:bg-amber-700 text-white font-bold px-7 py-3 rounded-full transition shadow-md">
                 Learn About Us
-
             </a>
 
         </section>
@@ -573,141 +403,111 @@
     </main>
 
 
-    <!-- =========================================
-         COMPONENT 9: FOOTER
-    ========================================== -->
+    <!-- COMPONENT 8: FOOTER -->
+    <footer class="bg-[#2c1810] text-[#f5e6d3] pt-10 pb-6">
 
-    <footer class="bg-[#1a0e0a] text-[#d6c6b3]
-                   border-t-4 border-amber-500">
+        <div class="max-w-7xl mx-auto px-5">
 
-        <div class="max-w-7xl mx-auto px-5 py-12">
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8 pb-8">
 
-            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-
-
-                <!-- BRAND -->
-
-                <div>
-
-                    <h3 class="text-amber-500
-                               font-bold text-lg mb-3">
-
+                <!-- BRAND INFORMATION -->
+                <section>
+                    <h2 class="text-xl font-extrabold text-amber-500 mb-4">
                         ☕ THE ROASTED BEAN
+                    </h2>
 
-                    </h3>
-
-                    <p class="text-sm leading-6 text-stone-400">
-
-                        Premium coffee, freshly roasted and served with
-                        a welcoming neighborhood experience.
-
+                    <p class="text-sm text-stone-300 leading-7">
+                        Where Every Cup Tells a Story.
+                        Carefully prepared coffee and welcoming moments
+                        come together here.
                     </p>
+                </section>
 
-                </div>
 
+                <!-- QUICK LINKS -->
+                <nav aria-label="Footer navigation">
+                    <h2 class="text-lg font-bold mb-4">
+                        Quick Links
+                    </h2>
 
-                <!-- EXPLORE -->
-
-                <div>
-
-                    <h4 class="text-amber-500 text-xs uppercase
-                               tracking-wider font-bold mb-4">
-
-                        Explore
-
-                    </h4>
-
-                    <ul class="space-y-2 text-sm">
+                    <ul class="space-y-3 text-sm">
 
                         <li>
-                            <a href="index.html"
-                               class="hover:text-white">
+                            <a href="../../index.html"
+                               class="hover:text-amber-500 transition">
                                 Home
                             </a>
                         </li>
 
                         <li>
                             <a href="about.html"
-                               class="hover:text-white">
-                                About
+                               class="hover:text-amber-500 transition">
+                                About Us
                             </a>
                         </li>
 
                         <li>
                             <a href="contact.html"
-                               class="hover:text-white">
-                                Contact
+                               class="hover:text-amber-500 transition"
+                               aria-current="page">
+                                Contact Us
                             </a>
                         </li>
 
-                    </ul>
-
-                </div>
-
-
-                <!-- ACCOUNT -->
-
-                <div>
-
-                    <h4 class="text-amber-500 text-xs uppercase
-                               tracking-wider font-bold mb-4">
-
-                        Account
-
-                    </h4>
-
-                    <ul class="space-y-2 text-sm">
-
                         <li>
                             <a href="signin.html"
-                               class="hover:text-white">
+                               class="hover:text-amber-500 transition">
                                 Sign In
                             </a>
                         </li>
 
                         <li>
                             <a href="signup.html"
-                               class="hover:text-white">
+                               class="hover:text-amber-500 transition">
                                 Sign Up
                             </a>
                         </li>
 
                     </ul>
+                </nav>
 
-                </div>
 
+                <!-- CONTACT DETAILS -->
+                <section>
+                    <h2 class="text-lg font-bold mb-4">
+                        Get in Touch
+                    </h2>
 
-                <!-- VISIT -->
-
-                <div>
-
-                    <h4 class="text-amber-500 text-xs uppercase
-                               tracking-wider font-bold mb-4">
-
-                        Visit
-
-                    </h4>
-
-                    <p class="text-sm leading-6 text-stone-400">
-
+                    <address class="not-italic text-sm text-stone-300 leading-7">
                         24 Main Street<br>
                         Downtown Coffee District<br>
-                        Lahore, Pakistan<br>
-                        Open daily · 7:00 AM – 11:00 PM
+                        Lahore, Pakistan
+                    </address>
 
+                    <p class="text-sm mt-3">
+                        <a href="mailto:hello@theroastedbean.com"
+                           class="hover:text-amber-500 transition">
+                            hello@theroastedbean.com
+                        </a>
                     </p>
 
-                </div>
+                    <p class="text-sm mt-2">
+                        <a href="tel:+923001234567"
+                           class="hover:text-amber-500 transition">
+                            +92 300 1234567
+                        </a>
+                    </p>
+                </section>
 
             </div>
 
 
             <!-- COPYRIGHT -->
+            <div class="border-t border-stone-700 pt-5 text-center">
 
-            <div class="text-center border-t border-[#2c1810]
-                        mt-10 pt-5 text-xs text-stone-500">
-
-                © 2026 The Roasted Bean. All rights reserved.
+                <p class="text-sm text-stone-400">
+                    &copy; 2026 The Roasted Bean. All rights reserved.
+                </p>
 
             </div>
 
@@ -717,3 +517,4 @@
 
 </body>
 </html>
+```
