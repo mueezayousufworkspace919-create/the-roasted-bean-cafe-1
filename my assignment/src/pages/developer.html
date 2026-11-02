@@ -1,0 +1,337 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Panel | The Roasted Bean</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body class="bg-[#fdfbf7] text-[#2c1810]">
+
+    <!-- NAVIGATION BAR -->
+    <nav class="bg-[#1a0e0a] text-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-5 py-4 flex flex-wrap items-center justify-between gap-4">
+
+            <a href="../../index.html" class="flex items-center gap-3">
+                <img src="logo/logo.png"
+                     alt="The Roasted Bean Logo"
+                     class="w-11 h-11 object-contain">
+
+                <div>
+                    <h1 class="text-xl font-bold tracking-wide">
+                        The Roasted Bean
+                    </h1>
+                    <p class="text-xs text-amber-400">
+                        Premium Coffee House
+                    </p>
+                </div>
+            </a>
+
+            <div class="flex flex-wrap items-center gap-5 text-sm font-semibold">
+                <a href="../../index.html" class="hover:text-amber-400">Home</a>
+                <a href="../../index.html#coffee-menu" class="hover:text-amber-400">Coffee Menu</a>
+                <a href="about.html" class="hover:text-amber-400">About</a>
+                <a href="contact.html" class="hover:text-amber-400">Contact</a>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- PAGE HEADER -->
+    <header class="bg-[#2c1810] text-white py-12 px-5 text-center">
+        <p class="text-amber-400 uppercase tracking-[3px] text-sm font-bold">
+            Administration
+        </p>
+
+        <h2 class="text-3xl md:text-4xl font-bold mt-3">
+            Coffee Management Panel
+        </h2>
+
+        <p class="text-[#d6c6b3] mt-3">
+            Manage coffee products, update records and explore coffee data.
+        </p>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-5 py-10">
+
+        <!-- STATISTICS -->
+        <section class="grid grid-cols-1 sm:grid-cols-3 gap-5 mb-10">
+
+            <div class="bg-white rounded-xl shadow-sm border border-stone-200 p-6">
+                <p class="text-stone-500 text-sm font-semibold">Total Products</p>
+                <h3 id="totalProducts" class="text-3xl font-bold text-[#2c1810] mt-2">0</h3>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-sm border border-stone-200 p-6">
+                <p class="text-stone-500 text-sm font-semibold">Premium Products</p>
+                <h3 id="premiumProducts" class="text-3xl font-bold text-amber-700 mt-2">0</h3>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-sm border border-stone-200 p-6">
+                <p class="text-stone-500 text-sm font-semibold">Valid Price Records</p>
+                <h3 id="validProducts" class="text-3xl font-bold text-green-700 mt-2">0</h3>
+            </div>
+
+        </section>
+
+        <!-- ADD / EDIT COFFEE FORM -->
+        <section class="bg-white rounded-2xl shadow-sm border border-stone-200 p-6 md:p-8 mb-10">
+
+            <div class="flex flex-wrap justify-between items-center gap-3 mb-6">
+                <div>
+                    <p class="text-amber-700 uppercase tracking-widest text-xs font-bold">
+                        Product Management
+                    </p>
+
+                    <h2 id="formHeading" class="text-2xl font-bold mt-1">
+                        Add New Coffee
+                    </h2>
+                </div>
+
+                <span class="text-xs bg-amber-100 text-amber-900 px-3 py-2 rounded-full font-bold">
+                    CRUD Operations
+                </span>
+            </div>
+
+            <form id="coffeeForm">
+
+                <input type="hidden" id="editId">
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+                    <div>
+                        <label for="coffeeName" class="block font-semibold text-sm mb-2">
+                            Coffee Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="coffeeName"
+                            placeholder="Enter coffee name"
+                            required
+                            class="w-full border border-stone-300 rounded-lg px-4 py-3 outline-none focus:border-amber-600">
+                    </div>
+
+                    <div>
+                        <label for="coffeeCategory" class="block font-semibold text-sm mb-2">
+                            Coffee Category
+                        </label>
+
+                        <select
+                            id="coffeeCategory"
+                            required
+                            class="w-full border border-stone-300 rounded-lg px-4 py-3 outline-none focus:border-amber-600">
+
+                            <option value="">Select Category</option>
+                            <option value="Hot Coffee">Hot Coffee</option>
+                            <option value="Cold Coffee">Cold Coffee</option>
+                            <option value="Special Coffee">Special Coffee</option>
+                            <option value="Other">Other</option>
+
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="coffeePrice" class="block font-semibold text-sm mb-2">
+                            Price (Rs.)
+                        </label>
+
+                        <input
+                            type="number"
+                            id="coffeePrice"
+                            placeholder="Enter price"
+                            min="1"
+                            required
+                            class="w-full border border-stone-300 rounded-lg px-4 py-3 outline-none focus:border-amber-600">
+                    </div>
+
+                    <div>
+                        <label for="coffeeDescription" class="block font-semibold text-sm mb-2">
+                            Description
+                        </label>
+
+                        <input
+                            type="text"
+                            id="coffeeDescription"
+                            placeholder="Enter coffee description"
+                            required
+                            class="w-full border border-stone-300 rounded-lg px-4 py-3 outline-none focus:border-amber-600">
+                    </div>
+
+                </div>
+
+                <div class="flex flex-wrap items-center gap-3 mt-6">
+
+                    <button
+                        type="submit"
+                        id="submitButton"
+                        class="bg-[#2c1810] hover:bg-[#4b2b1d] text-white px-7 py-3 rounded-lg font-bold transition">
+                        Add Coffee
+                    </button>
+
+                    <button
+                        type="button"
+                        id="cancelEdit"
+                        class="hidden bg-stone-200 hover:bg-stone-300 text-stone-800 px-6 py-3 rounded-lg font-bold">
+                        Cancel Edit
+                    </button>
+
+                </div>
+
+                <p id="formMessage" class="mt-4 text-sm font-semibold"></p>
+
+            </form>
+        </section>
+
+        <!-- SEARCH AND FILTER -->
+        <section class="mb-6">
+
+            <div class="flex flex-wrap justify-between items-center gap-4 mb-5">
+
+                <div>
+                    <p class="text-amber-700 uppercase tracking-widest text-xs font-bold">
+                        Your Products
+                    </p>
+
+                    <h2 class="text-2xl font-bold mt-1">
+                        Coffee Records
+                    </h2>
+                </div>
+
+                <button
+                    type="button"
+                    id="resetMenu"
+                    class="bg-red-100 hover:bg-red-200 text-red-700 px-4 py-2 rounded-lg text-sm font-bold">
+                    Reset Menu
+                </button>
+
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+                <input
+                    type="search"
+                    id="searchCoffee"
+                    placeholder="Search coffee by name or description..."
+                    class="w-full border border-stone-300 bg-white rounded-lg px-4 py-3 outline-none focus:border-amber-600">
+
+                <select
+                    id="filterCategory"
+                    class="w-full border border-stone-300 bg-white rounded-lg px-4 py-3 outline-none focus:border-amber-600">
+
+                    <option value="">All Categories</option>
+                    <option value="Hot Coffee">Hot Coffee</option>
+                    <option value="Cold Coffee">Cold Coffee</option>
+                    <option value="Special Coffee">Special Coffee</option>
+                    <option value="Other">Other</option>
+
+                </select>
+
+            </div>
+
+            <p id="searchMessage" class="text-red-600 text-sm mt-3"></p>
+
+        </section>
+
+        <!-- COFFEE RECORDS -->
+        <section class="mb-14">
+
+            <div id="coffeeContainer"
+                 class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+                <!-- JavaScript displays coffee records here -->
+
+            </div>
+
+        </section>
+
+        <!-- AXIOS API SECTION -->
+        <section class="bg-[#1a0e0a] text-white rounded-2xl p-6 md:p-8">
+
+            <div class="flex flex-wrap justify-between items-center gap-4 mb-6">
+
+                <div>
+                    <p class="text-amber-400 uppercase tracking-widest text-xs font-bold">
+                        External Data
+                    </p>
+
+                    <h2 class="text-2xl font-bold mt-2">
+                        Coffee API Integration
+                    </h2>
+
+                    <p class="text-[#d6c6b3] text-sm mt-2">
+                        Coffee information retrieved using Axios GET request.
+                    </p>
+                </div>
+
+                <button
+                    type="button"
+                    id="reloadApi"
+                    class="bg-amber-500 hover:bg-amber-600 text-[#1a0e0a] px-5 py-3 rounded-lg font-bold">
+                    Reload API Data
+                </button>
+
+            </div>
+
+            <p id="apiStatus" class="text-amber-300 text-sm mb-5">
+                Loading coffee data...
+            </p>
+
+            <div id="apiContainer"
+                 class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+                <!-- API data displays here -->
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#1a0e0a] text-[#d6c6b3] text-center py-7 px-5 mt-10">
+
+        <div class="flex items-center justify-center gap-3 mb-3">
+            <img src="logo/logo.png"
+                 alt="The Roasted Bean Logo"
+                 class="w-9 h-9 object-contain">
+
+            <h3 class="text-white font-bold text-lg">
+                The Roasted Bean
+            </h3>
+        </div>
+
+        <p class="text-sm">
+            Premium Coffee House | Developer Management Panel
+        </p>
+
+        <p class="text-xs mt-3">
+            &copy; 2026 The Roasted Bean. All Rights Reserved.
+        </p>
+
+        <a href="../../index.html"
+           class="inline-block text-amber-400 hover:text-amber-300 mt-4 text-sm">
+            Back to Home
+        </a>
+
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script src="js/script.js"></script>
+
+</body>
+</html>
